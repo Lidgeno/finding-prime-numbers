@@ -1,6 +1,6 @@
 # finding-prime-numbers
 EN/FR attempt to make clever and efficient algorithms that seek the prime numbers in a given range (0 to max)
-Tentative d'ecriture d'algorithmes fûtes et efficaces qui cherchent les nombres premiers dans un intervalle donne
+Tentative d'ecriture d'algorithmes fûtés et efficaces qui cherchent les nombres premiers dans un intervalle donné
 
 Hey welcome to this project, check license directives below
 
@@ -36,17 +36,17 @@ MATHS
 - un nombre premier ne peut pas etre trouve par d autres nombres premiers
 - tout entier peut s'ecrire (entier = a^n * b^o * c^p * ...) ou a,b,c nombres premiers et n,o,p entiers en exposant
 - on en deduit qu'un entier ( a^n * b^o * c^p * ...) peut s'ecrire de maniere unique ( a^n * k), ou k est simplement entier
-- 2 est le seule nombre pair a etre premier, donc on incremente par 2 sur les nombres impairs pour reduire le nombre de calcul a effectuer
+- 2 est le seule nombre pair a etre premier, donc on incrémente par 2 sur les nombres impairs pour réduire le nombre de calcul à effectuer
 
 INTUITION
 - donc, POUR chaque entier contenu dans les limites, on suppose qu'il est premier
-- mais POUR chacun des nombres premiers deja trouves, si on calcule ce nombre avec, alors il n'est pas premier
-- pour ce faire, POUR chaque nombre jusqu'a ce que entier soit depasse, on teste si entier est calcule
+- mais POUR chacun des nombres premiers deja trouvé, si on calcule ce nombre avec, alors il n'est pas premier
+- pour ce faire, POUR chaque nombre jusqu'a ce que entier soit depasse, on teste si entier est calculé
 - Tous les nombres en dessous de cet entier ont ete calcules, on peut donc conserver pour chaque nombre premier le dernier nombre entier utilise
-- si on ecrit l'entier ( a^n * b^o * c^p * ...) avec a < b < c, l'entier est ecrit de maniere unique
+- si on écrit l'entier ( a^n * b^o * c^p * ...) avec a < b < c, l'entier est écrit de manière unique
 
 OBSERVATION
-- Il y aura toujours une perte jusqu'a 1calcul/premier/entier, pour contrer ca on peut stocker le resultat dans un tableau et y comparer l'entier en premier
+- Il y aura toujours une perte jusqu'à 1calcul/premier/entier, pour contrer ca on peut stocker le resultat dans un tableau et y comparer l'entier en premier
 - on pourrait ordonnancer le tableau ou trouver dans le tableau si l'entier existe
 - mais le gain en calcul n'est pas suffisant pour justifier une recherche pour chaque entier dans le tableau
 - de plus le CPU n'est pas utilise a 100% et on pourrait separer la tache en threads pour tester plusieurs entiers (si on a assez de nombres premiers)
