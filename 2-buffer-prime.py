@@ -32,9 +32,9 @@ for i in range(3,max_range+1,2):
     prime = True
 
     # buffer was too slow, plan is to use the ~1 over calculation/prime/number
-    if i in buffer_numbers:
+    if(i==buffer_numbers[1]):
         prime = False
-        buffer_numbers.remove(i)
+        buffer_numbers.remove(1)
     else:
         # for each prime number 2 excluded
         for j in range(1, prime_counter):
