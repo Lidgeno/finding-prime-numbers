@@ -22,7 +22,7 @@ for i in range(3,max_range+1,2):
             break
             
         # multiply with other numbers until limit is reached
-        for k in range(prime_limit[j],i):
+        for k in range(prime_limit[j],i,2):
             # until result is over i
             temp_result = k * prime_list[j]
             
