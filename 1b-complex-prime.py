@@ -30,10 +30,7 @@ for i in range(3,max_range+1,2):
             #and k <= i/prime_list[j], even more slower            
             while(prime_list[j] > min_prime_for[round((k-1)/2)] and k <= i):
                 prime_limit[j] = k
-                k += 2
-            if(k>=i):
-                break
-            
+                k += 2            
             
             # until result is over i
             temp_result = k * prime_list[j]
