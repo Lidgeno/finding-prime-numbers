@@ -1,4 +1,8 @@
-﻿from time import time
+# this simple code is actually faster, even though
+# there are multiple repition in calculation
+# it has to do with even more calculation to avoid those in the other ones
+
+from time import time
 begin_time = time()
 current_time = round(begin_time)
 
@@ -46,7 +50,7 @@ for i in range(3,max_range+1,2):
 
     if(prime):
         prime_list.append(i)
-        # to avoid repetition as in a*b and b*a
+        # to avoid repetition of a*b
         prime_limit.append(i)
         prime_counter += 1
 
