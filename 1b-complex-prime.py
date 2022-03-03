@@ -26,7 +26,8 @@ for i in range(3,max_range+1,2):
             
         # multiply with other numbers until limit is reached
         for k in range(prime_limit[j],i,2):
-            #and k <= i/prime_list[j]            
+            # to avoid repetition as in a*b and b*a
+            #and k <= i/prime_list[j], even more slower            
             while(prime_list[j] > min_prime_for[round((k-1)/2)] and k <= i):
                 prime_limit[j] = k
                 k += 2
@@ -59,7 +60,7 @@ for i in range(3,max_range+1,2):
     if(prime):
         prime_list.append(i)
         min_prime_for.append(i)
-        # to avoid repetition as in a*b and b*a
+        # to avoid repetition of a*b
         prime_limit.append(i)
         prime_counter += 1
 
